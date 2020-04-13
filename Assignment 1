@@ -1,0 +1,32 @@
+## TASK 1:
+#Ans:  mkdir -p A/{B/{D/{I/M/Z,J/L/Z},E/H/L/Z},C/{F/H/L,G/K/L/Z}}
+       tree
+  --------
+  
+##TASK 2:
+#Ans:  which date
+       chmod 000 /usr/bin/date
+       ls -l /usr/bin/date
+       useradd A -s /usr/bin/date 
+       setfacl -m u:A:rwx /usr/bin/date
+       su - A
+       date
+       chmod 000 /usr/bin/date
+    -------
+
+##TASK 3:
+#Ans:  useradd P
+       passwd P
+       useradd Q
+       passwd Q
+       vim /etc/sudoers
+       su - P
+       mkdir MyFolder
+       cd MyFolder
+       touch newFile
+       cd
+       sudo cp -r /home/P/MyFolder /home/Q
+       logout
+       su - Q
+       ls 
+
